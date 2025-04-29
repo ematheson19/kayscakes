@@ -27,7 +27,6 @@ $(document).ready(function () {
         }
     });
 
-    // $("#toggle-form").text('⇴ Click here to open the form');
     // Toggle form section
     $('#toggle-form').click(function () {
         $('#form').slideToggle(500, updateBtnTxt);
@@ -40,5 +39,4 @@ $(document).ready(function () {
             $('#toggle-form').text('⇴ Click here to open the form');
         }
     }
-
 });
