@@ -2,11 +2,18 @@
 // Original Author : Evan Matheson
 
 let slideIndex = 1;
+let autoSlideInterval;
+let isHovered = false;
+let isClicked = false;
+
+// Swiping tracking
+let touchStartX = 0;
+let touchEndX = 0;
 
 // Every image in the "images" file
 const images = [
     { src: "images/img1.jpeg", caption: "Decorated Easter Sugar Cookies" },
-    { src: "images/img2.jpeg", caption: "White Buttercream Drip Cake with Sprinkles"},
+    { src: "images/img2.jpeg", caption: "White Buttercream Drip Cake with Sprinkles" },
     { src: "images/img3.jpeg", caption: "Peanut Butter Chocolate Cupcakes" },
     { src: "images/img4.jpeg", caption: "White Cake with Buttercream Frosting" },
     { src: "images/img5.jpeg", caption: "Vanilla Cupcakes with Raspberry Filling" },
@@ -33,7 +40,7 @@ images.forEach((img, index) => {
     slide.className = "mySlides";
     slide.innerHTML = `
         <div class="numbertext">${index + 1} / ${images.length}</div>
-        <img src="${img.src}" style="width:100%">
+        <img src="${img.src}" style="width:100%" alt="${img.caption}">
         <div class="text">${img.caption}</div>
     `;
     container.appendChild(slide);
@@ -60,3 +67,62 @@ function showSlides(n) {
 
     slides[slideIndex - 1].style.display = "block";
 }
+
+// Autoplay slides
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        if (!isHovered && !isClicked) {
+            plusSlides(1);
+        }
+    }, 3000); // Changes slides every 3 seconds
+}
+
+// Stop the auto sliding
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Pause the slide on hover  or click
+container.addEventListener("mouseenter", () => {
+    isHovered = true;
+    stopAutoSlide();
+});
+
+// This function restarts the auto slide when a hover ends if there is no click
+container.addEventListener("mouseleave", () => {
+    isHovered = false;
+    startAutoSlide();
+});
+
+// This function stops the auto slide when the div is clicked
+container.addEventListener("click", () => {
+    isClicked = true;
+    stopAutoSlide();
+});
+
+container.addEventListener("touchstart", handleTouchStart, { passive: true });
+container.addEventListener("touchmove", handleTouchMove, { passive: true });
+container.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+// Tracking for the starting position of the touch
+function handleTouchStart(e) {
+    const touch = e.touches[0];
+    touchStartX = touch.clientX;
+}
+
+// Tracking for the ending position of the touch
+function handleTouchMove(e) {
+    const touch = e.touches[0];
+    touchEndX = touch.clientX;
+}
+
+// Handles the swipe action for the touch distance 
+function handleTouchEnd() {
+    if (touchStartX - touchEndX > 50) {
+        plusSlides(1);
+    } else if (touchEndX - touchStartX > 50) {
+        plusSlides(-1);
+    }
+}
+
+startAutoSlide();
