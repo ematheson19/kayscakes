@@ -30,9 +30,16 @@ $(document).ready(function () {
     // $("#toggle-form").text('⇴ Click here to open the form');
     // Toggle form section
     $('#toggle-form').click(function () {
-        console.log("toggle form's visibility");
-        $('#form').slideToggle(500);
-        $('#toggle-form').text($('#form').is(':hidden') ? '⇴ Click here to open the form' : '⇞ Click to hide the form');
-        console.log("form visibility is done")
+        $('#form').slideToggle(500, updateBtnTxt);
     });
+
+    function updateBtnTxt() {
+        if ($('#form').is(':visible')) {
+            $('#toggle-form').text('⇞ Click to hide the form');
+        } else {
+            $('#toggle-form').text('⇴ Click here to open the form');
+        }
+    }
+
+
 });
