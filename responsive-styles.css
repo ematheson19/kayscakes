@@ -1,0 +1,325 @@
+/* Responsive Style Sheet For Kay's Cakes */
+
+/* Larger screens */
+@media (min-width: 1025px) {
+
+    nav h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 1.4rem;
+    }
+
+    .slideshow-container {
+        max-width: 650px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .prev,
+    .next {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+
+    nav h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    .nav-links {
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .slideshow-container {
+        max-width: 600px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .mySlides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    .text {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .prev,
+    .next {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        padding: 0;
+    }
+}
+
+/* Tablet and smaller */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        font-size: 2rem;
+        color: #c06c84;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background-color: #ffd6e3;
+        padding: 20px 0 20px 20px;
+        margin: 0;
+        z-index: 999;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+        color: #c06c84;
+        text-decoration: none;
+    }
+
+    .nav-links a:hover {
+        color: #f67280;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .full-menu {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .form-section {
+        padding: 40px 20px;
+        width: 90%;
+    }
+
+    .gallery-section {
+        padding: 40px 20px;
+    }
+
+    .slideshow-container {
+        max-width: 95%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .mySlides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    .text {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .prev,
+    .next {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    #contact h3 {
+        font-size: 1.6rem;
+    }
+
+    #contact p {
+        font-size: 1rem;
+    }
+
+    .about-owner {
+        padding: 100px 20px;
+    }
+
+    .owner-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .owner-photo {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    nav h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 1.05rem;
+        padding: 8px 0;
+    }
+
+    .hero {
+        padding-top: 50px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    input,
+    textarea {
+        font-size: 1rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+
+    .form-section {
+        padding: 30px 15px;
+        width: 90%;
+    }
+
+    #contact {
+        padding-top: 30px;
+    }
+
+    #contact h3 {
+        font-size: 1.4rem;
+    }
+
+    #contact p {
+        font-size: 0.95rem;
+    }
+
+    .slideshow-container {
+        max-width: 90%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .mySlides img {
+        max-height: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .text {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .prev,
+    .next {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .about-owner {
+        padding-top: 150px;
+        margin-top: 350px;
+    }
+
+    .owner-description {
+        font-size: 1rem;
+    }
+
+    .owner-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .owner-photo {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .full-menu {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .menu-parent {
+        padding-top: 100px;
+    }
+}

@@ -1,0 +1,108 @@
+/* Styled Gallery */
+
+.gallery-section {
+    margin-top: 200px;
+    padding: 50px 20px;
+    background-color: #ffe0e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 300px;
+}
+
+.gallery-section h2 {
+    color: #c06c84;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.slideshow-container {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(240, 128, 128, 0.7);
+    color: #fff0f5;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(240, 128, 128, 0.9);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background: rgba(192, 108, 132, 0.7);
+    color: #fff0f5;
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.numbertext {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
