@@ -29,7 +29,12 @@ const images = [
     { src: "images/img15.jpeg", caption: "Toasty S’mores Cupcakes" },
     { src: "images/img16.jpeg", caption: "Mini Raspberry Chocolate Cake" },
     { src: "images/img17.jpeg", caption: "Banana Cream Pie-Inspired Cupcakes" },
-    { src: "images/img18.jpeg", caption: "Carrot Cake Cupcakes" }
+    { src: "images/img18.jpeg", caption: "Carrot Cake Cupcakes" },
+    { src: "images/img19.jpeg", caption: "Strawberry Chocolate Cake" },
+    { src: "images/img20.jpeg", caption: "Chocolate Covered Strawberries" },
+    { src: "images/img21.jpeg", caption: "Cupcake Variety Pack" },
+    { src: "images/img22.jpeg", caption: "Graduation Cupcakes" },
+    { src: "images/img23.jpeg", caption: "Unicorn Palace Cake" }
 ];
 
 
