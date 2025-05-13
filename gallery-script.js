@@ -5,6 +5,7 @@ let slideIndex = 1;
 let autoSlideInterval;
 let isHovered = false;
 let isClicked = false;
+let slideChanging = false;
 
 // Swiping tracking
 let touchStartX = 0;
@@ -55,7 +56,14 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
+    if (slideChanging) return;
+    slideChanging = true;
+
     showSlides(slideIndex += n);
+
+    setTimeout(() => {
+        slideChanging = false;
+    }, 400); // 400ms delay prevents double-firing
 }
 
 // Show slides function
@@ -129,5 +137,19 @@ function handleTouchEnd() {
         plusSlides(-1);
     }
 }
+
+// Event Listeners Added For Mobile Purposes
+document.querySelector(".prev").addEventListener("touchend", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    plusSlides(-1);
+}, { passive: false });
+
+document.querySelector(".next").addEventListener("touchend", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    plusSlides(1);
+}, { passive: false });
+
 
 startAutoSlide();
