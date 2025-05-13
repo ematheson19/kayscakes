@@ -7,7 +7,7 @@
     <meta property="og:title" content="Kay’s Cakes Website">
     <meta property="og:description"
         content="Explore our selection of hand-crafted cakes and sweet treats, made with love!">
-    <meta property="og:image" content="https://kayscakes.shop/images/kayscakesimg.jpg?v=2">
+    <meta property="og:image" content="https://kayscakes.shop/images/kayscakesimg.jpg">
     <meta property="og:url" content="https://kayscakes.shop">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Kay’s Cakes">
@@ -113,8 +113,8 @@
     <section id="gallery" class="gallery-section">
         <h2>Our Gallery</h2>
         <div class="slideshow-container" id="slideshow-container">
-            <a class="prev" onclick="plusSlides(-1)" aria-label="Previous slide">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)" aria-label="Next slide">&#10095;</a>
+            <a class="prev" onclick="event.stopPropagation(); plusSlides(-1)" aria-label="Previous slide">&#10094;</a>
+            <a class="next" onclick="event.stopPropagation(); plusSlides(1)" aria-label="Next slide">&#10095;</a>
         </div>
     </section>
 
