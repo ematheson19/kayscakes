@@ -9,7 +9,11 @@ let slideChanging = false;
 
 // Swiping tracking
 let touchStartX = 0;
+let touchStartY = 0;
 let touchEndX = 0;
+let touchEndY = 0;
+let touchTarget = null;
+
 
 // Every image in the "images" file
 const images = [
@@ -87,7 +91,7 @@ function startAutoSlide() {
         if (!isHovered && !isClicked) {
             plusSlides(1);
         }
-    }, 3000); // Changes slides every 3 seconds
+    }, 3000); // Changes the slides every 3 seconds
 }
 
 // Stop the auto sliding
@@ -121,20 +125,31 @@ container.addEventListener("touchend", handleTouchEnd, { passive: true });
 function handleTouchStart(e) {
     const touch = e.touches[0];
     touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchTarget = e.target;
 }
 
 // Tracking for the ending position of the touch
 function handleTouchMove(e) {
     const touch = e.touches[0];
     touchEndX = touch.clientX;
+    touchEndY = touch.clientY;
 }
 
 // Handles the swipe action for the touch distance 
-function handleTouchEnd() {
-    if (touchStartX - touchEndX > 50) {
-        plusSlides(1);
-    } else if (touchEndX - touchStartX > 50) {
-        plusSlides(-1);
+function handleTouchEnd(e) {
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    if (Math.abs(deltaY) > Math.abs(deltaX)) return;
+
+    if (touchTarget.closest(".prev, .next")) return;
+
+    // Swipes
+    if (deltaX < -50) {
+        plusSlides(1); // Left Swiping
+    } else if (deltaX > 50) {
+        plusSlides(-1); // Right Swiping
     }
 }
 
