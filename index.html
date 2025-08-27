@@ -32,7 +32,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#form-trigger">Order Form</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -115,72 +114,6 @@
         <div class="slideshow-container" id="slideshow-container">
             <a class="prev" onclick="event.stopPropagation(); plusSlides(-1)" aria-label="Previous slide">&#10094;</a>
             <a class="next" onclick="event.stopPropagation(); plusSlides(1)" aria-label="Next slide">&#10095;</a>
-        </div>
-    </section>
-
-    <section id="form-trigger" class="form-toggle">
-        <h2>Want to Place an Order?</h2>
-        <p id="toggle-form" style="cursor: pointer;">⇴ Click here to open the form</p>
-    </section>
-
-    <section id="form" class="form-section">
-        <h2>Order Form</h2>
-        <form action="https://evanmatheson.dev/index.php" method="POST">
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" name="name" id="name" placeholder="Jane Dough" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" name="email" id="email" placeholder="you@example.com" required>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" name="phone" id="phone" placeholder="(952) 460-0474" required>
-            </div>
-
-            <div class="form-group">
-                <label for="address">Street Address:</label>
-                <input type="text" name="address" id="address" placeholder="123 Cupcake Lane" required>
-            </div>
-
-            <div class="form-group">
-                <label for="town">Town/City and State:</label>
-                <input type="text" name="town" id="town" placeholder="Bakerville" required>
-            </div>
-
-            <div class="form-group">
-                <label for="date">Preferred Pickup/Delivery Date:</label>
-                <input type="date" name="date" id="date" required>
-            </div>
-
-            <div class="form-group">
-                <label for="description">Order Details (items & quantity):</label>
-                <textarea name="description" id="description" rows="4"
-                    placeholder="e.g. 2 dozen cupcakes, 1 chocolate cake" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Payment Method:</label>
-                <div class="radio-options-inline">
-                    <label><input type="radio" name="payment_method" value="Cash App" required> Cash App</label>
-                    <label><input type="radio" name="payment_method" value="Venmo"> Venmo</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="payment_username">Cash App/Venmo Username:</label>
-                <input type="text" name="payment_username" id="payment_username" placeholder="@yourusername" required>
-            </div>
-
-            <button type="submit" class="submit-btn">Submit Order</button>
-        </form>
-
-        <div class="policy-notice">
-            <p><strong>Note:</strong> A 50% deposit is required to confirm all orders. Orders are not considered
-                official until the deposit is received. We currently accept deposits via Cash App or Venmo only.</p>
         </div>
     </section>
 

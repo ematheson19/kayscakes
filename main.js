@@ -26,17 +26,4 @@ $(document).ready(function () {
             $('.menu-toggle').removeClass('active').html("&#9776;");
         }
     });
-
-    // Toggle form section
-    $('#toggle-form').click(function () {
-        $('#form').slideToggle(500, updateBtnTxt);
-    });
-
-    function updateBtnTxt() {
-        if ($('#form').is(':visible')) {
-            $('#toggle-form').text('⇞ Click to hide the form');
-        } else {
-            $('#toggle-form').text('⇴ Click here to open the form');
-        }
-    }
 });
