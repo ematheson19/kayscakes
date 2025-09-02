@@ -39,7 +39,12 @@ const images = [
     { src: "images/img20.jpeg", caption: "Chocolate Covered Strawberries" },
     { src: "images/img21.jpeg", caption: "Cupcake Variety Pack" },
     { src: "images/img22.jpeg", caption: "Graduation Cupcakes" },
-    { src: "images/img23.jpeg", caption: "Unicorn Palace Cake" }
+    { src: "images/img23.jpeg", caption: "Unicorn Palace Cake" },
+    { src: "images/img24.jpeg", caption: "" },
+    { src: "images/img25.jpeg", caption: "" },
+    { src: "images/img26.jpeg", caption: "" },
+    { src: "images/img27.jpeg", caption: "" },
+    { src: "images/img28.jpeg", caption: "" }
 ];
 
 
