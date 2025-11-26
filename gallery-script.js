@@ -15,7 +15,7 @@ let touchEndY = 0;
 let touchTarget = null;
 
 
-// Every image in the "images" file
+// Every image in the "images" folder
 const images = [
     { src: "images/img1.jpeg", caption: "Decorated Easter Sugar Cookies" },
     { src: "images/img2.jpeg", caption: "White Buttercream Drip Cake with Sprinkles" },
